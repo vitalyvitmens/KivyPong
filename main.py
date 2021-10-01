@@ -5,6 +5,7 @@ from kivy.properties import (
 )
 from kivy.vector import Vector
 from kivy.clock import Clock
+from kivy.graphics import (Color, Ellipse, Rectangle, Line)
 
 
 class PongPaddle(Widget):
@@ -17,7 +18,6 @@ class PongPaddle(Widget):
             bounced = Vector(-1 * vx, vy)
             vel = bounced * 1.1
             ball.velocity = vel.x, vel.y + offset
-
 
 class PongBall(Widget):
     velocity_x = NumericProperty(0)

@@ -1,8 +1,10 @@
 #:kivy 1.0.9
 
 <PongBall>:
-    size: 100, 100
+    size: 150, 150
     canvas:
+        Color:
+            rgba: 1, 1, 0, 1
         Ellipse:
             pos: self.pos
             size: self.size
@@ -10,6 +12,8 @@
 <PongPaddle>:
     size: 100, 400
     canvas:
+        Color:
+            rgba: 0, 0, 1, 1
         Rectangle:
             pos: self.pos
             size: self.size
@@ -20,18 +24,20 @@
     player2: player_right
 
     canvas:
+        Color:
+            rgba: 0, 1, 0, 0.5
         Rectangle:
             pos: self.center_x - 5, 0
-            size: 10, self.height
+            size: 50, self.height
 
     Label:
-        font_size: 100
+        font_size: 200
         center_x: root.width / 4
         top: root.top - 50
         text: str(root.player1.score)
 
     Label:
-        font_size: 100
+        font_size: 200
         center_x: root.width * 3 / 4
         top: root.top - 50
         text: str(root.player2.score)
