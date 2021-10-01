@@ -6,6 +6,7 @@ from kivy.properties import (
 from kivy.vector import Vector
 from kivy.clock import Clock
 from kivy.graphics import (Color, Ellipse, Rectangle, Line)
+from random import randint
 
 
 class PongPaddle(Widget):
@@ -35,7 +36,7 @@ class PongGame(Widget):
 
     def serve_ball(self, vel=(20, 0)):
         self.ball.center = self.center
-        self.ball.velocity = vel
+        self.ball.velocity = Vector(vel[0], vel[1]).rotate(randint(0, 360))
 
     def update(self, dt):
         self.ball.move()
