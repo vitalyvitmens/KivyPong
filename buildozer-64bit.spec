@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = Pong
+title = KivyPong
 
 # (str) Package name
 package.name = pong
