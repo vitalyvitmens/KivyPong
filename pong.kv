@@ -43,14 +43,15 @@
         text: 'Егор:' + ' ' + str(root.player2.score)
 
     Label:
-        font_size: 30
-        center_x: root.width / 1.9
-        top: root.top - 530
+        font_size: 50
+        center_x: root.width / 2
+        top: root.top - 70
         text: 'судья: Даник'
 
     PongBall:
         id: pong_ball
         center: self.parent.center
+
 
     PongPaddle:
         id: player_left
